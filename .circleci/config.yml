@@ -10,4 +10,3 @@ workflows:
           context: docker-hub-login
           image: gremlin/amazon-eks-pod-identity-webhook
           tag: $CIRCLE_TAG
-          lint-dockerfile: true
