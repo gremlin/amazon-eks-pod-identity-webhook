@@ -1,0 +1,12 @@
+version: 2.1
+
+orbs:
+  docker-publish: circleci/docker@1.4.0
+
+workflows:
+  build-publish:
+    jobs:
+      - docker/publish:
+          image: gremlin/amazon-eks-pod-identity-webhook
+          tag: $CIRCLE_TAG
+          lint-dockerfile: true
