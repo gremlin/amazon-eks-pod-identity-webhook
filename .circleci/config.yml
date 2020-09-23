@@ -9,4 +9,4 @@ workflows:
       - docker/publish:
           context: docker-hub-login
           image: gremlin/amazon-eks-pod-identity-webhook
-          tag: $CIRCLE_TAG
+          tag: latest,$CIRCLE_TAG
